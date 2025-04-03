@@ -1,0 +1,217 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Countdown Section */
+.countdown {
+    background-color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.countdown h2 {
+    margin-bottom: 2rem;
+    color: #1a2a6c;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    min-width: 120px;
+}
+
+.countdown-item span {
+    display: block;
+}
+
+.countdown-item .days,
+.countdown-item .hours,
+.countdown-item .minutes,
+.countdown-item .seconds {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.countdown-item .label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Agenda Section */
+.agenda {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.agenda h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1a2a6c;
+}
+
+.agenda-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.agenda-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.agenda-item .time {
+    color: #b21f1f;
+    font-weight: bold;
+}
+
+.agenda-item h3 {
+    margin: 1rem 0;
+    color: #1a2a6c;
+}
+
+/* Speakers Section */
+.speakers {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.speakers h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1a2a6c;
+}
+
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.speaker-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.speaker-card:hover {
+    transform: translateY(-5px);
+}
+
+.speaker-image img {
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+}
+
+.speaker-card h3 {
+    color: #1a2a6c;
+    margin-bottom: 0.5rem;
+}
+
+.speaker-card p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #1a2a6c;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .countdown-item {
+        min-width: 100px;
+        padding: 1rem;
+    }
+
+    .countdown-item .days,
+    .countdown-item .hours,
+    .countdown-item .minutes,
+    .countdown-item .seconds {
+        font-size: 2rem;
+    }
+
+    .agenda-grid,
+    .speakers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 2rem 1rem;
+    }
+
+    .countdown-timer {
+        gap: 1rem;
+    }
+
+    .countdown-item {
+        min-width: 80px;
+        padding: 0.8rem;
+    }
+
+    .countdown-item .days,
+    .countdown-item .hours,
+    .countdown-item .minutes,
+    .countdown-item .seconds {
+        font-size: 1.5rem;
+    }
+
+    .agenda,
+    .speakers {
+        padding: 2rem 1rem;
+    }
+}
